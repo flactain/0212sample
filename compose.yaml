@@ -1,0 +1,9 @@
+services:
+  app:
+    ports:
+      - "8080:8080"
+    volumes:
+      - type: bind
+        source: ./target/web-app-sample.war
+        target: /usr/local/tomcat/webapps
+    image: tomcat:9.0.85-jre17
